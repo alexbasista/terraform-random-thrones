@@ -9,7 +9,7 @@ variable "starks" {
 
 variable "lannisters" {
     description = "list of Lannister first names"
-    default     = ["tywin", "joanna", "jaime", "cersei", "tyrion", "lancil", "tytos"]
+    default     = ["tywin", "joanna", "jaime", "cersei", "tyrion", "lancel", "tytos"]
 }
 
 resource "random_shuffle" "stark" {
@@ -30,6 +30,6 @@ output "starks" {
     value = random_shuffle.stark.result
 }
 
-output "lannister" {
+output "lannisters" {
     value = random_shuffle.lannister.result
 }
