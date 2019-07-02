@@ -1,6 +1,6 @@
-terraform {
-  required_version = ">= 0.12"
-}
+#terraform {
+#  required_version = ">= 0.12"
+#}
 
 variable "starks" {
     description = "list of the Stark first names"
