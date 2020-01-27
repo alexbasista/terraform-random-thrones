@@ -29,3 +29,5 @@ output "starks" {
 output "lannisters" {
     value = random_shuffle.lannister.result
 }
+
+# test update
