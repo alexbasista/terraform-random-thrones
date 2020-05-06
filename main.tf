@@ -1,11 +1,27 @@
 variable "starks" {
-    description = "list of the Stark first names"
+    type        = list(string)
+    description = "List of Stark first names."
     default     = ["ned", "catelyn", "robb", "sansa", "arya", "bran", "rickon", "rickard", "lyanna"]
 }
 
 variable "lannisters" {
-    description = "list of Lannister first names"
+    type        = list(string)
+    description = "list of Lannister first names."
     default     = ["tywin", "joanna", "jaime", "cersei", "tyrion", "lancel", "tytos"]
+}
+
+variable "tyrells" {
+    type = map(
+        object(
+            {
+                firstname = string
+                lastname  = string
+            }
+        )
+    )
+
+    description = "Map of objects of Tyrell first and last names."
+    default = {}
 }
 
 resource "random_shuffle" "stark" {
@@ -22,6 +38,14 @@ resource "random_shuffle" "lannister" {
     ]
 }
 
+resource "null_resource" "tyrells" {
+    for_each = var.tyrells
+
+    provisioner "local-exec" {
+      command = "echo ${each.value.firstname}; echo ${each.value.lastname}"
+    }
+}
+
 output "starks" {
     value = random_shuffle.stark.result
 }
@@ -29,5 +53,3 @@ output "starks" {
 output "lannisters" {
     value = random_shuffle.lannister.result
 }
-
-# test update
