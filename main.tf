@@ -1,13 +1,13 @@
 variable "starks" {
     type        = list(string)
     description = "List of Stark first names."
-    default     = ["ned", "catelyn", "robb", "sansa", "arya", "bran", "rickon", "rickard", "lyanna", "test-update"]
+    default     = ["ned", "catelyn", "robb", "sansa", "arya", "bran", "rickon", "rickard", "lyanna"]
 }
 
 variable "lannisters" {
     type        = list(string)
     description = "list of Lannister first names."
-    default     = ["tywin", "joanna", "jaime", "cersei", "tyrion", "lancel", "tytos", "test-update-lannister", "test"]
+    default     = ["tywin", "joanna", "jaime", "cersei", "tyrion", "lancel", "tytos"]
 }
 
 variable "tyrells" {
