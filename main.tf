@@ -27,7 +27,7 @@ variable "tyrells" {
 resource "random_shuffle" "stark" {
     input = [
         for stark in var.starks:
-        upper(stark)
+        lower(stark)
     ]
 }
 
