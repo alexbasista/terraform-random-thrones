@@ -1,7 +1,7 @@
 variable "starks" {
     type        = list(string)
     description = "List of Stark first names."
-    default     = ["ned", "catelyn", "robb", "sansa", "arya", "bran", "rickon", "rickard", "lyanna"]
+    default     = ["ned", "catelyn", "robb", "sansa", "arya", "bran", "rickon", "rickard", "lyanna", "test"]
 }
 
 variable "lannisters" {
