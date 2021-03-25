@@ -21,7 +21,20 @@ variable "tyrells" {
     )
 
     description = "Map of objects of Tyrell first and last names."
-    default = {}
+    default = {
+        Tyrell1 = {
+            firstname = "Mace"
+            lastname  = "Tyrell"
+        },
+        Tyrell2 = {
+            firstname = "Loras"
+            lastname  = "Tyrell"
+        },
+        Tyrell3 = {
+            firstname = "Margaery"
+            lastname  = "Tyrell"
+        }
+    }
 }
 
 resource "random_shuffle" "stark" {
