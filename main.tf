@@ -1,3 +1,8 @@
+variable "temp_test" {
+    type        = string
+    description = "temp testing"
+}
+
 variable "starks" {
     type        = list(string)
     description = "List of Stark first names."
