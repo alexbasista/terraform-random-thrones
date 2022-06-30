@@ -1,5 +1,4 @@
 variable "temp_test" {
-    type        = string
     description = "temp testing"
 }
 
