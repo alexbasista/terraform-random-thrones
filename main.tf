@@ -62,11 +62,3 @@ resource "null_resource" "tyrells" {
       command = "echo ${each.value.firstname}; echo ${each.value.lastname}"
     }
 }
-
-output "starks" {
-    value = random_shuffle.stark.result
-}
-
-output "lannisters" {
-    value = random_shuffle.lannister.result
-}
