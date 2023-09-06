@@ -8,7 +8,7 @@ resource "random_shuffle" "stark" {
 resource "random_shuffle" "lannister" {
     input = [
         for lannister in var.lannisters:
-        upper(lannister)
+        lower(lannister)
     ]
 }
 
