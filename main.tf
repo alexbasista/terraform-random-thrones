@@ -1,14 +1,14 @@
 resource "random_shuffle" "stark" {
     input = [
         for stark in var.starks:
-        upper(stark)
+        lower(stark)
     ]
 }
 
 resource "random_shuffle" "lannister" {
     input = [
         for lannister in var.lannisters:
-        lower(lannister)
+        upper(lannister)
     ]
 }
 
