@@ -1,7 +1,7 @@
 resource "random_shuffle" "stark" {
     input = [
         for stark in var.starks:
-        lower(stark)
+        upper(stark)
     ]
 }
 
