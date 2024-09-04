@@ -21,3 +21,5 @@ resource "null_resource" "tyrells" {
 }
 
 resource "random_pet" "test" {}
+
+resource "random_pet" "test_2" {}
