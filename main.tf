@@ -19,7 +19,3 @@ resource "null_resource" "tyrells" {
       command = "echo ${each.value.firstname}; echo ${each.value.lastname}"
     }
 }
-
-resource "random_pet" "test" {}
-
-resource "random_pet" "test_2" {}
