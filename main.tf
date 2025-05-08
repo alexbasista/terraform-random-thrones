@@ -20,4 +20,6 @@ resource "null_resource" "tyrells" {
     }
 }
 
-resource "random_pet" "change" {}
+resource "random_pet" "change_1" {}
+
+resource "random_pet" "change_2" {}
